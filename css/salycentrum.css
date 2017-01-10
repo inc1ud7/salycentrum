@@ -217,11 +217,15 @@ section h2 {
     }
 }
 
+#about {
+    margin-bottom: 25px;
+}
+
 .btn-outline {
     margin-top: 15px;
-    border: solid 2px #fff;
+    border: solid 2px #ABCC0A;
     font-size: 20px;
-    color: #fff;
+    color: #ABCC0A;
     background: 0 0;
     transition: all .3s ease-in-out;
 }
@@ -230,9 +234,9 @@ section h2 {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-    border: solid 2px #fff;
-    color: #18bc9c;
-    background: #fff;
+    border: solid 2px #ABCC0A;
+    color: #ffffff;
+    background: #ABCC0A;
 }
 
 .floating-label-form-group {
