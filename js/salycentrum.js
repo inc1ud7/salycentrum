@@ -37,10 +37,13 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 function initMap() {
-  var uluru = {lat: 49.1988454, lng: 21.6530733};
+  var stropkov = {lat: 49.1988454, lng: 21.6530733};
+  var bardejov = {lat: 49.294586, lng: 21.275401};
+  var raslavice = {lat: 49.149816, lng: 21.315665};
+  var markers = [stropkov, bardejov, raslavice];
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 18,
-    center: uluru,
+    zoom: 9,
+    center: stropkov,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     disableDefaultUI: true,
     styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#cccccc"}]},
@@ -54,8 +57,11 @@ function initMap() {
     {"elementType":"labels.icon","stylers":[{"visibility":"on"}]},
     {"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#666666"}]}]
   });
-  var marker = new google.maps.Marker({
-    position: uluru,
-    map: map
-  });
+  for (i = 0; i <= 2; i++) {
+    var marker = new google.maps.Marker({
+      position: markers[i],
+      map: map
+    });
+  }
+
 };
