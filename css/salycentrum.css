@@ -106,6 +106,7 @@ h6 {
 /* Home Page Carousel */
 header.carousel {
     height: 350px;
+    margin-top: 50px;
 }
 
 header.carousel .item,
