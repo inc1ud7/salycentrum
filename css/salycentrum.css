@@ -121,13 +121,6 @@ header.carousel .fill {
     background-size: cover;
 }
 
-.carousel-control.right{
-    background-image: linear-gradient(to right, rgba(171,204,10,0.0001) 0, rgba(171,204,10,0.5) 100%);
-}
-
-.carousel-control.left{
-    background-image: linear-gradient(to left, rgba(171,204,10,0.0001) 0, rgba(171,204,10,0.5) 100%);
-}
 
 section {
 
