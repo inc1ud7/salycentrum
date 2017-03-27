@@ -63,7 +63,7 @@ h6 {
 }
 
 .navbar {
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Signika', sans-serif;
     font-weight: 700;
 }
 
@@ -101,6 +101,10 @@ h6 {
 .navbar-inverse {
     border: 0;
     background-color: #fff;
+}
+
+.navbar-header .phone {
+    text-align: left;
 }
 
 /* Home Page Carousel */
@@ -168,9 +172,9 @@ section h2 {
 }
 
 #portfolio .portfolio-item .portfolio-link .title {
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Signika', sans-serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 16px;
     color: #7D7D7D;
     text-align: center;
 }
@@ -187,7 +191,7 @@ section h2 {
     }
 
     #portfolio .portfolio-item .portfolio-link .title {
-      font-size: 16px;
+      font-size: 12px;
     }
 }
 

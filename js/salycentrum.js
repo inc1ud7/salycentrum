@@ -58,10 +58,16 @@ function initMap() {
     {"elementType":"labels.icon","stylers":[{"visibility":"on"}]},
     {"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#666666"}]}]
   });
+
+  var icon = {
+    url: 'img/ICON_maps_V3.png',
+    scaledSize: new google.maps.Size(30,50)
+  };
   for (i = 0; i <= 3; i++) {
     var marker = new google.maps.Marker({
       position: markers[i],
-      map: map
+      map: map,
+      icon : icon
     });
   }
 
