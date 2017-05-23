@@ -7,13 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Effort s.r.o.">
 
     <title>Saly Centrum</title>
 
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- Custom CSS -->
     <link href="css/salycentrum.css" rel="stylesheet">
 
@@ -21,6 +24,14 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+
+    <!-- Custom js -->
+    <script src="js/salycentrum.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRcwRq0w6eT2xE4dfPpcssXi3-mEG4hT0&callback=initMap" async defer></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,13 +41,10 @@
     <![endif]-->
 
 </head>
-
 <body>
-
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -53,7 +61,6 @@
                 <div class="phone">+421 905 123 456</div>
             </div>
 -->
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
@@ -65,9 +72,9 @@
                     <li class="page-scroll">
                         <a href="#about">O nás</a>
                     </li>
-                    <li class="page-scroll">
+                    <!--<li class="page-scroll">
                         <a href="#gallery">Galéria</a>
-                    </li>
+                    </li>-->
                     <li class="page-scroll">
                         <a href="#contact">Kontakt</a>
                     </li>
@@ -170,7 +177,7 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Gallery Section
     <section id="gallery">
         <div class="container">
             <div class="row">
@@ -184,7 +191,7 @@
             </div>
         </div>
     </section>
-
+-->
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
@@ -196,68 +203,61 @@
             </div>
             <div class="row">
               <div class="col-lg-2 col-md-3 col-sm-2 col-lg-offset-1">
-                <div class="text-center">Saly Centrum Stropkov</div>
+                <div class="text-center"><b>Saly Centrum Stropkov</b></div>
                 <div class="text-center">Hviezdoslavova 5</div>
                 <div class="text-center">Budova bývalý poťovník</div>
                 <div class="text-center">
                   <i class="fa fa-phone" aria-hidden="true"></i>
-                  <a href="tel:+421917105328">0917105328</a>
+                  <a class="phone" href="tel:+421917105328">0917105328</a>
                 </div>
               </div>
               <div class="col-lg-2 col-md-3 col-sm-2 text-center">
-                <div class="text-center">Saly Záhradné Centrum Stropkov</div>
+                <div class="text-center"><b>Saly Záhradné Centrum Stropkov</b></div>
                 <div class="text-center">Pri rybníku</div>
                 <div class="text-center">
                   <i class="fa fa-phone" aria-hidden="true"></i>
-                  <a href="tel:+421905942544">0905942544</a>
+                  <a class="phone" href="tel:+421905942544">0905942544</a>
                 </div>
               </div>
               <div class="col-lg-2 col-md-3 col-sm-2 text-center">
-                <div class="text-center">Saly Centrum Svindník</div>
+                <div class="text-center"><b>Saly Centrum Svindník</b></div>
                 <div class="text-center">Centrálna 422</div>
                 <div class="text-center">Parkovisko Makos</div>
                 <div class="text-center">
                   <i class="fa fa-phone" aria-hidden="true"></i>
-                  <a href="tel:+421905942613">0905942613</a>
+                  <a class="phone" href="tel:+421905942613">0905942613</a>
                 </div>
               </div>
               <div class="col-lg-2 col-md-3 col-sm-2 text-center">
-                <div class="text-center">Saly Centrum Bardejov</div>
+                <div class="text-center"><b>Saly Centrum Bardejov</b></div>
                 <div class="text-center">Duklianska 16</div>
                 <div class="text-center">Areál byvalých pekární</div>
                 <div class="text-center">
                   <i class="fa fa-phone" aria-hidden="true"></i>
-                  <a href="tel:+421905282334">0905282334</a>
+                  <a class="phone" href="tel:+421905282334">0905282334</a>
                 </div>
               </div>
               <div class="col-lg-2 col-md-3 col-sm-2 text-center">
-                <div class="text-center">Saly Centrum Raslavice</div>
+                <div class="text-center"><b>Saly Centrum Raslavice</b></div>
                 <div class="text-center">Hlavná 104</div>
                 <div class="text-center">
                   <i class="fa fa-phone" aria-hidden="true"></i>
-                  <a href="tel:+421905282334">0905282334</a>
+                  <a class="phone" href="tel:+421905282334">0905282334</a>
                 </div>
               </div>
             </div>
 
-            <div id="map"></div>
+            <div class="row">
+              <div class="col-12">
+                <div id="map"></div>
+              </div>
+            </div>
+
             <div class="row">
               <div class="col-lg-12 text-center">
                   <ul class="list-inline">
                       <li>
-                          <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                      </li>
-                      <li>
-                          <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                      </li>
-                      <li>
-                          <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                      </li>
-                      <li>
-                          <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                      </li>
-                      <li>
-                          <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                          <a href="https://www.facebook.com/Saly-Centrum-335210139823347" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
                       </li>
                   </ul>
               </div>
@@ -278,29 +278,12 @@
         </div>
     </footer>
 
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <!-- Scroll to Top Button -->
     <div class="scroll-top page-scroll visible-xs visible-sm">
         <a class="btn btn-primary" href="#page-top">
             <i class="fa fa-chevron-up"></i>
         </a>
     </div>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/salycentrum.js"></script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRcwRq0w6eT2xE4dfPpcssXi3-mEG4hT0&callback=initMap" async defer></script>
-
 </body>
 
 </html>

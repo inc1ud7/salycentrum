@@ -37,14 +37,16 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 function initMap() {
-  var stropkov = {lat: 49.1988454, lng: 21.6530733};
-  var svidnik = {lat: 49.305564, lng: 21.568117};
-  var bardejov = {lat: 49.294586, lng: 21.275401};
+  var stropkov_centrum = {lat:49.1988201, lng:21.6530608};
+  var stropkov_zahradne = {lat:49.2110125, lng:21.6475753};
+  var svidnik = {lat: 49.3036425, lng:21.5743967};
+  var bardejov = {lat: 49.3049399, lng:21.2880793};
   var raslavice = {lat: 49.149816, lng: 21.315665};
-  var markers = [stropkov, svidnik, bardejov, raslavice];
+  var markers = [stropkov_centrum, stropkov_zahradne, svidnik, bardejov, raslavice];
+  var center = {lat:49.2490132, lng:21.4166425};
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 10,
-    center: stropkov,
+    center: center,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     disableDefaultUI: true,
     styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#cccccc"}]},
@@ -63,7 +65,7 @@ function initMap() {
     url: 'img/ICON_maps_V3.png',
     scaledSize: new google.maps.Size(30,50)
   };
-  for (i = 0; i <= 3; i++) {
+  for (i = 0; i <= 4; i++) {
     var marker = new google.maps.Marker({
       position: markers[i],
       map: map,
